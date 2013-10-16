@@ -2,12 +2,12 @@
 
     <item
         android:id="@+id/about"
-        android:icon = "@drawable/ic_launcher"
+        android:icon = "@drawable/icon1"
         android:orderInCategory="100"
         android:showAsAction="always"/>
     <item
         android:id="@+id/author"
-        android:icon = "@drawable/ic_launcher"
+        android:icon = "@drawable/girl"
         android:orderInCategory="200"
         android:showAsAction="always"/>
 

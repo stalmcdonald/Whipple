@@ -10,6 +10,7 @@ package com.cm.whipple;
 
 
 import android.os.Bundle;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -40,11 +41,14 @@ public class MainActivity<TideActivity> extends Activity {
 		super.onOptionsItemSelected(item);
 		switch(item.getItemId()){
 		//action bar button found by id
-//		case R.id.about:
-//			aboutApp();
-//			break;
 		case R.id.author:
 			aboutAuthor();
+			break;
+		case R.id.about:
+			//aboutApp();
+			Intent intent = new Intent(this, AboutAppActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
 			break;
 		}
 		return true;
@@ -52,12 +56,11 @@ public class MainActivity<TideActivity> extends Activity {
 
 	//creating a method for actionbar item aboutApp 
 	//Launches Intent (not finished yet)
-	private void aboutApp() {
-			// sends user to site that shows more information on Whipple
-//			Intent intent = new Intent(MainActivity.this, AboutAppActivity.class);
-//			startActivity(intent); 	
-			
-	}//end aboutApp
+//	private void aboutApp() {
+//			// sends user to site that shows more information on Whipple
+//		
+//			
+//	}//end aboutApp
 	
 	//creating a method for actionbar item about Author in Alert Dialog 
 	private void aboutAuthor() {
