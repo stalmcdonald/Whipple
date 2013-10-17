@@ -7,12 +7,17 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
         <activity
             android:name="com.cm.whipple.MainActivity"
             android:label="@string/app_name">
@@ -22,10 +27,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.cm.whipple.AboutAppActivity"
             android:label="@string/app_name"
             android:parentActivityName="MainActivity">
+        </activity>
+        
+        <activity
+            android:name="com.cm.whipple.TipsActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="MainActivity">
+        </activity>
+        
+         <activity
+            android:name="com.cm.whipple.WebActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+               	<category android:name="android.intent.category.DEFAULT" />
+               	<category android:name="android.intent.category.BROWSABLE"/>
+               	<data android:scheme="http"/>
+            </intent-filter>
         </activity>
     </application>
 

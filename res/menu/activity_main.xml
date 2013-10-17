@@ -1,14 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item
-        android:id="@+id/about"
-        android:icon = "@drawable/icon1"
-        android:orderInCategory="100"
-        android:showAsAction="always"/>
+    
     <item
         android:id="@+id/author"
         android:icon = "@drawable/girl"
-        android:orderInCategory="200"
+        android:orderInCategory="100"
         android:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/about"
+        android:title="About Whipple"
+        android:orderInCategory="200"
+        android:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/tips"
+        android:title="Clamming Tips"
+        android:orderInCategory="300"
+        android:showAsAction="never"/>
 
 </menu>
