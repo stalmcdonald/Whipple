@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView
+        android:id="@+id/tvWater"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:text="Choose between the following cities: 
+        Seattle, Tacoma or Olympia  " />
+	
+	<TextView 
+	    android:text="City:" 
+	    android:id="@+id/tvCity"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"> 
+	</TextView>
+	
+	<EditText 
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/etCity">
+		<requestFocus></requestFocus>
+	</EditText>
+
+	<Button
+	    android:id="@+id/bPrediction"
+	    android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+	    android:text="Get Current Tide" />
+	
+</LinearLayout>

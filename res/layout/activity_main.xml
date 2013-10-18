@@ -1,15 +1,95 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#f3efe3"
     tools:context=".MainActivity" >
+    
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvWater"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:text="Choose between the following cities: 
+        Seattle, Tacoma or Olympia  " />
+	
+	<TextView 
+	    android:text="City:" 
+	    android:id="@+id/tvCity"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"> 
+	</TextView>
+	
+	<EditText 
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/etCity">
+		<requestFocus></requestFocus>
+	</EditText>
 
-</RelativeLayout>
+	<Button
+	    android:id="@+id/bPrediction"
+	    android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+	    android:text="Get Current Tide" />
+	
+	
+	<Button 
+	    android:id="@+id/bPredictionLow" 
+	    android:text="Get Location"
+		android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignParentLeft="true"
+        android:layout_marginTop="2dp">
+	</Button>
+
+	<TextView
+	    android:id="@+id/tvPrediction"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Current Tidal Prediction"
+	    android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	<TextView android:text="Name" 
+	    android:id="@+id/tidesite"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_column="1"
+		android:layout_row="1">
+	</TextView>
+	
+	<TextView android:text="Date" 
+	    android:id="@+id/calendar"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_column="1"
+		android:layout_row="2">
+	</TextView>
+	
+	<TextView android:text="Tidal Prediction" 
+	    android:id="@+id/tidepre"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_column="1"
+		android:layout_row="3">
+	</TextView>
+	
+	<TextView android:text="Wave Height" 
+	    android:id="@+id/waveheight"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_column="1"
+		android:layout_row="4">
+	</TextView>
+
+	
+
+</LinearLayout>
